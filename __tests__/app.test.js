@@ -1,6 +1,7 @@
 const pool = require('../lib/utils/pool');
 const setup = require('../data/setup');
 const request = require('supertest');
+const app = require('../lib/app');
 const { dogs } = require('../lib/dog-data');
 
 describe('dog routes', () => {
