@@ -13,9 +13,9 @@ CREATE TABLE dogs (
 
 INSERT INTO dogs (name, age, breed, owner)
 VALUES
-  ('Korra', 1, 'Pyrador, 'Charles'),
+  ('Korra', 1, 'Pyrador', 'Charles'),
   ('Lily', 1, 'Pitbull/Shepherd', 'Charles'),
   ('Sadie', 5, 'Shepherd/Rottweiler', 'Katie'),
   ('Grrrtrude', 8, 'Rottweiler, Mini', 'David'),
   ('Hilde', 8, 'German Shepherd', 'Klari'),
-  ('Wotann', 7, 'German Shepherd', 'Klari);
+  ('Wotann', 7, 'German Shepherd', 'Klari');
