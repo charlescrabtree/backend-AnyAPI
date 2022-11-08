@@ -37,6 +37,17 @@ describe('dog routes, and video game routes', () => {
     expect(res.body).toEqual(expected);
   });
 
+  it('/games/:id should return game details', async () => {
+    const res = await request(app).get('/games/1');
+    const Animal = {
+      id: '1',
+      title: 'Animal Crossing',
+      studio: 'Nintendo',
+      release_date: 'April 14, 2001'
+    };
+    expect(res.body).toEqual(Animal);
+  });
+
   afterAll(() => {
     pool.end();
   });
