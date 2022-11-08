@@ -4,7 +4,7 @@ const request = require('supertest');
 const app = require('../lib/app');
 const { dogs } = require('../lib/dog-data');
 
-describe('dog routes', () => {
+describe('dog routes, and video game routes', () => {
   beforeEach(() => {
     return setup(pool);
   });
@@ -27,6 +27,10 @@ describe('dog routes', () => {
     };
     expect(res.body).toEqual(lily);
   });
+
+  it('/video games should return a list of video games', async () => {
+    const res = await request(app).get('/videogames')
+  })
 
   afterAll(() => {
     pool.end();

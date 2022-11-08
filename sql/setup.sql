@@ -24,12 +24,12 @@ CREATE TABLE videogames (
     id BIGINT GENERATED ALWAYS AS IDENTITY,
     title VARCHAR NOT NULL,
     studio VARCHAR NOT NULL,
-    release-date VARCHAR NOT NULL
+    release_date VARCHAR NOT NULL
 );
 
-INSERT INTO videogames (title, studio, release-date)
+INSERT INTO videogames (title, studio, release_date)
 VALUES
   ('Animal Crossing', 'Nintendo', 'April 14, 2001'),
   ('Skyrim', 'Bethesda', 'November 11, 2011'),
-  ('Mario Kart', 'Nintendo', August 27, 1992),
+  ('Mario Kart', 'Nintendo', 'August 27, 1992'),
   ('Tales of Symphonia', 'NAMCO', 'August 29, 2003');
