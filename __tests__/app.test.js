@@ -17,7 +17,7 @@ describe('dog routes', () => {
   });
 
   it('/dogs/:id should return dog details', async () => {
-    const res = await request(app).get('/dogs/1');
+    const res = await request(app).get('/dogs/2');
     const lily = {
       id: '2',
       name: 'Lily',
