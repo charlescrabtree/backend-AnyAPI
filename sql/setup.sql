@@ -20,6 +20,8 @@ VALUES
   ('Hilde', 8, 'German Shepherd', 'Klari'),
   ('Wotann', 7, 'German Shepherd', 'Klari');
 
+DROP TABLE IF EXISTS videogames;
+
 CREATE TABLE videogames (
     id BIGINT GENERATED ALWAYS AS IDENTITY,
     title VARCHAR NOT NULL,
