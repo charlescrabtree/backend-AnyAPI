@@ -3,6 +3,7 @@ const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
 const { dogs } = require('../lib/dog-data');
+const { videogames } = require('../lib/game-data');
 
 describe('dog routes, and video game routes', () => {
   beforeEach(() => {
@@ -29,8 +30,12 @@ describe('dog routes, and video game routes', () => {
   });
 
   it('/video games should return a list of video games', async () => {
-    const res = await request(app).get('/videogames')
-  })
+    const res = await request(app).get('/videogames');
+    const expected = videogames.map((game) => {
+      return { id: game.id, title: game.title, studio: game.studio };
+    });
+    expect(res.body).toEqual(expected);
+  });
 
   afterAll(() => {
     pool.end();
